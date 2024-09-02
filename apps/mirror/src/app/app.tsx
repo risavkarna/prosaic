@@ -1,9 +1,11 @@
-import NxWelcome from './nx-welcome';
+import { EditorJSONPreview } from './EditorJSONPreview';
+import TipTap from './TipTap';
 
 export function App() {
   return (
     <div>
-      <NxWelcome title="mirror" />
+      <TipTap />
+      <EditorJSONPreview/>
     </div>
   );
 }
