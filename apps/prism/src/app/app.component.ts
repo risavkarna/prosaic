@@ -4,10 +4,12 @@ import { RouterModule } from '@angular/router';
 import { NgxTiptapModule } from 'ngx-tiptap';
 import { Editor } from '@tiptap/core';
 import StarterKit from '@tiptap/starter-kit';
+import { NxWelcomeComponent } from "./nx-welcome.component";
+import { ProseComponent } from "./prose/prose.component";
 
 @Component({
   standalone: true,
-  imports: [RouterModule, NgxTiptapModule, FormsModule],
+  imports: [RouterModule, NgxTiptapModule, FormsModule, NxWelcomeComponent, ProseComponent],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
