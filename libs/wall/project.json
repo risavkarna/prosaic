@@ -1,0 +1,9 @@
+{
+  "name": "wall",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/wall/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project wall --web",
+  "targets": {}
+}

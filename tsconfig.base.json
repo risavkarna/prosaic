@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@cosys-work/optics": ["libs/optics/src/index.ts"],
+      "@cosys-work/wall": ["libs/wall/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

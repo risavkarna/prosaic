@@ -5,7 +5,7 @@ import StarterKit from '@tiptap/starter-kit'
 // define your extension array
 const extensions = [StarterKit]
 
-const content = '<p>Hello World!</p>'
+const content = `<p>Click here and type! \n \n \n</p>`;
 
 const TipTap = () => {
   const editor = useEditor({
@@ -15,7 +15,7 @@ const TipTap = () => {
 
   return (
     <>
-      <EditorContent editor={editor} />
+      <EditorContent className='mx-12 border-stone-900 border-2 ' editor={editor} />
       <FloatingMenu editor={editor}>This is the floating menu</FloatingMenu>
       <BubbleMenu editor={editor}>This is the bubble menu</BubbleMenu>
     </>
