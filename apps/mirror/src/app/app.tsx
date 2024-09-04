@@ -1,26 +1,42 @@
 import { EditorJSONPreview } from './EditorJSONPreview';
 import TipTap from './TipTap';
 
-import { Link, Route, Routes } from 'react-router-dom';
+import { NavLink, Route, Routes } from 'react-router-dom';
 
 import { Wall } from '@cosys-work/wall';
 
-import { Optics } from '@cosys-work/optics';
+import { CollaborativeEditor } from '@cosys-work/optics';
 
 export function App() {
+
+  const activeLinkClass = "underline underline-offset-4 decoration-2";
+  const pendingLinkClass = "pending";
+
   return (
     <div>
       <br />
       <div role="navigation">
         <ul className='flex flex-row gap-8 justify-around'>
           <li>
-            <Link to="/">Default</Link>
+            <NavLink to="/"
+            className={({ isActive, isPending }) => {
+              return isActive ? activeLinkClass : isPending ? pendingLinkClass : "";
+            }}
+            >TipTap</NavLink>
           </li>
           <li>
-            <Link to="/wall">Wall</Link>
+            <NavLink to="/wall"
+            className={({ isActive, isPending }) => {
+              return isActive ? activeLinkClass : isPending ? pendingLinkClass : "";
+            }}
+            >Hybrid</NavLink>
           </li>
           <li>
-            <Link to="/optics">Optics</Link>
+            <NavLink to="/optics"
+            className={({ isActive, isPending }) => {
+              return isActive ? activeLinkClass : isPending ? pendingLinkClass : "";
+            }}
+            >ProseMirror</NavLink>
           </li>
         </ul>
       </div>
@@ -38,7 +54,7 @@ export function App() {
             </div>
           }
         />
-        <Route path="/optics" element={<Optics />} />
+        <Route path="/optics" element={<CollaborativeEditor />} />
         <Route path="/wall" element={<Wall />} />
 
       </Routes>
