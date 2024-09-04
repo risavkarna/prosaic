@@ -9,7 +9,7 @@ import { CollaborativeEditor } from '@cosys-work/optics';
 
 export function App() {
 
-  const activeLinkClass = "underline underline-offset-4 decoration-2";
+  const activeLinkClass = "underline underline-offset-4 decoration-2 decoration-teal-600";
   const pendingLinkClass = "pending";
 
   return (
@@ -29,7 +29,7 @@ export function App() {
             className={({ isActive, isPending }) => {
               return isActive ? activeLinkClass : isPending ? pendingLinkClass : "";
             }}
-            >Hybrid</NavLink>
+            >Remirror</NavLink>
           </li>
           <li>
             <NavLink to="/optics"
